@@ -99,6 +99,15 @@ export default function FinalPage() {
     return () => clearInterval(interval)
   }, [])
 
+  // VTurb Video initialization
+  useEffect(() => {
+    const iframe = document.getElementById("ifr_686545ba4f04a41940d14584") as HTMLIFrameElement;
+    if (iframe) {
+      const src = `https://scripts.converteai.net/fb1ee993-6fc1-499d-92b5-6bfeab3e9ad5/players/686545ba4f04a41940d14584/v4/embed.html${window.location.search || '?'}&vl=${encodeURIComponent(window.location.href)}`;
+      iframe.src = src;
+    }
+  }, [])
+
   const formatTime = (minutes: number, seconds: number) => {
     return `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`
   }
@@ -141,24 +150,24 @@ export default function FinalPage() {
           </p>
 
           <div className="flex justify-center w-full">
-            <div 
-              className="w-full max-w-[400px]"
-              dangerouslySetInnerHTML={{
-                __html: `
-                  <script type="text/javascript">
-                    var s=document.createElement("script");
-                    s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js";
-                    s.async=!0;
-                    document.head.appendChild(s);
-                  </script>
-                  <div id="ifr_686545ba4f04a41940d14584_wrapper" style="margin: 0 auto; width: 100%;">
-                    <div style="position: relative; padding: 187.5% 0 0 0;" id="ifr_686545ba4f04a41940d14584_aspect">
-                      <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_686545ba4f04a41940d14584" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" referrerpolicy="origin" onload="this.onload=null, this.src='https://scripts.converteai.net/fb1ee993-6fc1-499d-92b5-6bfeab3e9ad5/players/686545ba4f04a41940d14584/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe>
-                    </div>
-                  </div>
-                `
-              }}
-            />
+            <div className="w-full max-w-[400px]">
+              <Script 
+                src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js" 
+                strategy="afterInteractive"
+              />
+              <div id="ifr_686545ba4f04a41940d14584_wrapper" style={{ margin: "0 auto", width: "100%" }}>
+                <div style={{ position: "relative", padding: "187.5% 0 0 0" }} id="ifr_686545ba4f04a41940d14584_aspect">
+                  <iframe 
+                    frameBorder="0" 
+                    allowFullScreen 
+                    src="about:blank"
+                    id="ifr_686545ba4f04a41940d14584" 
+                    style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} 
+                    referrerPolicy="origin"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
