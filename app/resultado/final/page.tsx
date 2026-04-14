@@ -134,25 +134,25 @@ export default function FinalPage() {
           <h2 className="text-white text-xl font-bold leading-tight text-center px-2">
             Veja por dentro como é fácil transformar seu corpo com o método certo.
           </h2>
-          
+
           <p className="text-gray-400 text-sm leading-relaxed text-center px-4">
             Assista a Dani te mostrar, passo a passo, tudo o que você vai encontrar na plataforma: aulas, cronogramas, suporte e os detalhes que fazem toda diferença para ter resultado de verdade.
           </p>
 
           <div className="flex justify-center w-full">
             <div className="w-full max-w-[400px]">
-              <Script 
-                src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js" 
+              <Script
+                src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js"
                 strategy="afterInteractive"
               />
               <div id="ifr_686545ba4f04a41940d14584_wrapper" style={{ margin: "0 auto", width: "100%" }}>
                 <div style={{ position: "relative", padding: "187.5% 0 0 0" }} id="ifr_686545ba4f04a41940d14584_aspect">
-                  <iframe 
-                    frameBorder="0" 
-                    allowFullScreen 
+                  <iframe
+                    frameBorder="0"
+                    allowFullScreen
                     src="about:blank"
-                    id="ifr_686545ba4f04a41940d14584" 
-                    style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} 
+                    id="ifr_686545ba4f04a41940d14584"
+                    style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
                     referrerPolicy="origin"
                   />
                 </div>
@@ -303,7 +303,7 @@ export default function FinalPage() {
             <Button
               onClick={() => {
                 trackEvent("InitiateCheckout", { value: 217, currency: "BRL" })
-                window.open("https://pay.hotmart.com/B94983697Q?off=15r055s7&checkoutMode=10&offDiscount=BEMVINDAMAP", "_blank")
+                window.open("https://pay.hotmart.com/D105387669F?bid=1776194641840", "_blank")
               }}
               className="w-full py-7 rounded-full text-white font-bold text-xl bg-[#00aa11] hover:bg-[#00880e] transition-all shadow-lg shadow-[#00aa11]/20 uppercase tracking-tight"
             >
@@ -347,7 +347,7 @@ export default function FinalPage() {
               className="w-full h-auto object-cover"
             />
           </div>
-          
+
           <p className="text-white/80 text-sm leading-relaxed text-left px-1">
             Após a gestação e uma depressão profunda causada por diástase patológica, decidi mudar de vida. Usei minha formação em Engenharia de Alimentos para me aprofundar em nutrição esportiva, fisiologia do exercício e Educação Física, focando em treinamento abdominal e feminino. Testei tudo em mim até desenvolver uma nova consciência corporal, capaz de fortalecer e definir o abdômen. Comecei atendendo amigas em casa e percebi que muitas mulheres compartilhavam essa dor. Assim nasceu o Método Abdômen Power, que já transformou a vida de milhares de mulheres com base na minha trajetória real e conhecimento técnico.
           </p>
@@ -358,11 +358,11 @@ export default function FinalPage() {
           <h2 className="text-white text-2xl font-bold text-center mb-8">
             Sua Transformação nas próximas 5 semanas:
           </h2>
-          
+
           <div className="grid grid-cols-2 gap-4">
             {journeySteps.map((step, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="bg-white/5 border border-white/10 rounded-2xl p-4 flex flex-col items-center text-center shadow-lg"
               >
                 {/* Progress Bar Vertical */}
@@ -370,7 +370,7 @@ export default function FinalPage() {
                   {step.percentage}%
                 </span>
                 <div className="w-6 h-12 bg-white/10 rounded-full mb-3 flex flex-col justify-end p-0.5 overflow-hidden">
-                  <div 
+                  <div
                     className={`w-full rounded-full transition-all duration-1000 ${step.color}`}
                     style={{ height: `${step.percentage}%` }}
                   />
@@ -400,7 +400,7 @@ export default function FinalPage() {
             height={240}
             className="w-48 h-auto object-contain"
           />
-          
+
           <p className="text-gray-400 text-sm leading-relaxed max-w-[320px]">
             Com mais de 10 anos de experiência e milhares de alunas transformadas, tenho certeza de que você alcançará o melhor corpo da sua vida.
           </p>
