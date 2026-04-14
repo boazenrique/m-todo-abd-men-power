@@ -25,14 +25,6 @@ const transformationImages = [
   { src: "/D003.webp", alt: "Transformação 4" },
   { src: "/D004.webp", alt: "Transformação 5" },
 ]
-
-const testimonialImages = [
-  { src: "/ps001.png", alt: "Depoimento 1" },
-  { src: "/ps002.png", alt: "Depoimento 2" },
-  { src: "/ps003.png", alt: "Depoimento 3" },
-  { src: "/ps004.png", alt: "Depoimento 4" },
-]
-
 const journeySteps = [
   { label: "Hoje", percentage: 10, color: "bg-red-500", text: "Inchaço constante e sensação de abdômen estufado." },
   { label: "1ª semana", percentage: 25, color: "bg-[#869b26]", text: "Início do desinchaço e melhora no funcionamento intestinal." },
@@ -45,9 +37,7 @@ const journeySteps = [
 export default function FinalPage() {
   const [timeLeft, setTimeLeft] = useState({ minutes: 14, seconds: 36 })
   const [activeSlide, setActiveSlide] = useState(0)
-  const [activePsSlide, setActivePsSlide] = useState(0)
   const carouselRef = useRef<HTMLDivElement>(null)
-  const psCarouselRef = useRef<HTMLDivElement>(null)
 
   // Countdown timer
   useEffect(() => {
@@ -339,60 +329,6 @@ export default function FinalPage() {
           <span className="text-[#869b26] font-bold text-lg font-mono">
             {formatTime(timeLeft.minutes, timeLeft.seconds)}
           </span>
-        </div>
-
-        {/* 8.5 Carrossel de Resultados (Alunas) */}
-        <div className="pt-2">
-          <h2 className="text-white font-bold text-base mb-3 text-center">
-            Resultados reais de quem já iniciou:
-          </h2>
-          <div
-            ref={psCarouselRef}
-            onScroll={() => {
-              if (!psCarouselRef.current) return
-              const index = Math.round(
-                psCarouselRef.current.scrollLeft / psCarouselRef.current.offsetWidth
-              )
-              setActivePsSlide(index)
-            }}
-            className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-3 rounded-xl"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          >
-            {testimonialImages.map((img, i) => (
-              <div
-                key={i}
-                className="snap-center flex-shrink-0 w-full rounded-xl overflow-hidden"
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  width={420}
-                  height={560}
-                  className="w-full object-cover rounded-xl"
-                />
-              </div>
-            ))}
-          </div>
-
-          {/* Dots */}
-          <div className="flex justify-center gap-2 mt-3 mb-4">
-            {testimonialImages.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => {
-                  psCarouselRef.current?.scrollTo({
-                    left: i * (psCarouselRef.current?.offsetWidth ?? 0),
-                    behavior: "smooth",
-                  })
-                  setActivePsSlide(i)
-                }}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${activePsSlide === i
-                  ? "bg-[#869b26] w-5"
-                  : "bg-white/30"
-                  }`}
-              />
-            ))}
-          </div>
         </div>
 
         {/* 11. Seção Especialista - Quem vai te guiar */}
