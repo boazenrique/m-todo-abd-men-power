@@ -65,6 +65,8 @@ export default function Home() {
             <QuizQuestion
               question="Qual destas imagens mais se parece com seu abdômen hoje?"
               explanation="Seja sincera. Não existe resposta certa ou errada… isso vai nos ajudar a personalizar seu plano."
+              layout="grid"
+              isInstant={true}
               options={[
                 { label: "Plana com Diástase", image: "/PD.png" }, 
                 { label: "Parecendo grávida", image: "/PG.png" }, 
