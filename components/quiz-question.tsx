@@ -121,18 +121,18 @@ export function QuizQuestion({
                     <img
                       src={option.image}
                       alt={option.label}
-                      className="w-16 h-16 object-cover rounded-lg"
+                      className="w-20 h-20 object-cover rounded-xl"
                     />
                   </div>
                 )}
 
                 {/* Texto da opcao (centro) */}
                 <div className="flex-1 text-left">
-                  <span className="text-white text-sm font-medium block">
+                  <span className="text-white text-lg font-bold block leading-tight">
                     {option.label}
                   </span>
                   {option.subtitle && (
-                    <span className="text-gray-400 text-xs block mt-0.5">
+                    <span className="text-gray-400 text-sm block mt-1">
                       {option.subtitle}
                     </span>
                   )}

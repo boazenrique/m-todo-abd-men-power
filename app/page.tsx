@@ -66,10 +66,12 @@ export default function Home() {
               question="Qual destas imagens mais se parece com seu abdômen hoje?"
               explanation="Seja sincera. Não existe resposta certa ou errada… isso vai nos ajudar a personalizar seu plano."
               options={[
-                { label: "Barriguinha de grávida (mesmo sem estar grávida)", image: "/foto-1.webp" }, 
-                { label: "Magra, mas com barriguinha sempre pra frente", image: "/foto-2.webp" }, 
-                { label: "Treino pesado, mas abdômen não define", image: "/foto-3.webp" }, 
-                { label: "Barriga flácida e sem sustentação", image: "/foto-4.webp" }
+                { label: "Plana com Diástase", image: "/PD.png" }, 
+                { label: "Parecendo grávida", image: "/PG.png" }, 
+                { label: "Avental", image: "/avental.png" }, 
+                { label: "Normal", image: "/normal.png" }, 
+                { label: "Pochete", image: "/pochete.png" }, 
+                { label: "Flácida", image: "/flácida.png" }
               ]}
               onSelect={(answer) => handleAnswer("tipo_abdomen", answer)}
             />
