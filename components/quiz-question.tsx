@@ -105,8 +105,8 @@ export function QuizQuestion({
           </p>
         )}
 
-        {/* Card container com glassmorphism */}
-        <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-3xl p-5 shadow-2xl">
+        {/* Card container (glassmorphism removido no layout grid) */}
+        <div className={layout === "grid" ? "w-full" : "bg-black/40 backdrop-blur-md border border-white/10 rounded-3xl p-5 shadow-2xl"}>
           {/* Opcoes */}
           <div className={layout === "grid" ? "grid grid-cols-2 gap-4" : "space-y-3"}>
             {options.map((option, index) => (
