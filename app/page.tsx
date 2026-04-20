@@ -71,6 +71,7 @@ export default function Home() {
                 { label: "Plana com Diástase", image: "/PD.png" }, 
                 { label: "Parecendo grávida", image: "/PG.png" }, 
                 { label: "Avental", image: "/avental.png" }, 
+                { label: "Estômago Alto", image: "/estomagoalto.jpeg" },
                 { label: "Normal", image: "/normal.png" }, 
                 { label: "Pochete", image: "/pochete.png" }, 
                 { label: "Flácida", image: "/flácida.png" }

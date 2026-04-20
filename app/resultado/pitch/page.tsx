@@ -185,10 +185,10 @@ export default function PitchPage() {
                       <div
                         key={index}
                         className={`flex items-center gap-3 transition-all duration-500 ${processingStep > index
+                          ? 'opacity-100 translate-x-0'
+                          : processingStep === index + 1
                             ? 'opacity-100 translate-x-0'
-                            : processingStep === index + 1
-                              ? 'opacity-100 translate-x-0'
-                              : 'opacity-30 translate-x-2'
+                            : 'opacity-30 translate-x-2'
                           }`}
                       >
                         <span className={`text-xl transition-all duration-300 ${processingStep > index ? 'scale-110' : ''
@@ -279,9 +279,14 @@ export default function PitchPage() {
                   <h3 className="text-white text-2xl font-black uppercase tracking-tight">
                     Você ganha hoje um presente!
                   </h3>
-                  <p className="text-white font-medium text-lg flex items-center justify-center gap-2">
-                    <span>🎁</span> Presente: 40 táticas infalíveis para definir o abdômen sem passar fome
-                  </p>
+                  <div className="space-y-2">
+                    <p className="text-white font-medium text-lg flex items-center justify-center gap-2">
+                      <span>🎁</span> Mais de 15% de Desconto no MAP.
+                    </p>
+                    <p className="text-white font-medium text-lg flex items-center justify-center gap-2">
+                      <span>🎁</span> Plano Alimentar da Dani estratégico de ciclo de Carboidratos (5x2)
+                    </p>
+                  </div>
                 </div>
 
                 <Button

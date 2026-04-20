@@ -255,11 +255,11 @@ export default function FinalPage() {
           <div className="space-y-2 mb-5">
             <p className="text-white text-xs font-semibold tracking-wide mb-2">O QUE ESTÁ INCLUÍDO:</p>
             {[
-              "12 semanas de treino progressivo e estruturado",
-              "Técnicas de LPF, Bracing e Hipopressivos integradas",
-              "Método para fechar diástase, definir e secar",
-              "Sessões de 10 a 20 min (sem equipamento)",
-              "Acesso imediato pelo celular"
+              "Protocolo MAP completo de 12 semanas, pensado pra transformar seu abdômen com as técnicas mais eficientes que existem.",
+              "1 aula mais longa por semana pra ensinar e ajustar o seu corpo",
+              "Aulas curtas de até 10 minutos nos outros dias para acelerar os resultados",
+              "Aulas para você aprender a ativar o abdômen em bracing no dia a dia e em qualquer exercício no treino de musculação",
+              "6 meses de acesso à plataforma pra evoluir no seu ritmo e repetir quando quiser"
             ].map((benefit, index) => (
               <div key={index} className="flex items-start gap-2">
                 <span className="text-sm flex-shrink-0">✅</span>
@@ -271,10 +271,11 @@ export default function FinalPage() {
           {/* 7. Lista de Bônus Exclusivos - Sem background */}
           <div className="space-y-2 mb-6">
             {[
-              "Presente: 1º ciclo de ativação (liberado agora)",
-              "Método para Liberação da cicatriz da cesária",
-              "Como respirar e ativar o abdômen em bracing na musculação",
-              "40 táticas infalíveis para definir o abdômen sem passar fome"
+              "Grupo das alunas no WhatsApp pra te manter no caminho certo e tirar todas as tuas dúvidas e também ser avaliada (caso deseje)",
+              "Técnica de liberação da cicatriz da cesárea pra melhorar a resposta postural e o aspecto da “pochete",
+              "Plano Alimentar da Dani estratégico de ciclo de Carboidratos (5x2)",
+              "Ebook com 40 estratégias práticas e infalíveis pra definir o abdômen sem passar fome",
+              "MAP 2.0 com mais 6 semanas de exercícios mais avançados pra continuar evoluindo"
             ].map((bonus, idx) => (
               <p key={idx} className="text-white text-sm font-medium flex items-start gap-2">
                 <span className="flex-shrink-0">🎁</span>
@@ -292,10 +293,10 @@ export default function FinalPage() {
 
             <div className="flex items-start justify-center gap-1 mb-1">
               <span className="text-white text-xs font-bold mt-3">R$</span>
-              <span className="text-white text-6xl font-extrabold tracking-tighter">20,41</span>
+              <span className="text-white text-6xl font-extrabold tracking-tighter">21,44</span>
             </div>
 
-            <p className="text-white text-sm font-semibold">ou R$ 217,00 à vista</p>
+            <p className="text-white text-sm font-semibold">ou R$ 207,00 à vista</p>
           </div>
 
           {/* 9. Botão CTA - Movido para dentro do card */}
