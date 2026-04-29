@@ -23,7 +23,7 @@ export default function BarrigaProjetadaFunnel() {
   useEffect(() => {
     if (currentStep === 4) {
       setShowButton(false)
-      const timer = setTimeout(() => setShowButton(true), 4 * 60 * 1000)
+      const timer = setTimeout(() => setShowButton(true), 7 * 1000)
       return () => clearTimeout(timer)
     }
   }, [currentStep])

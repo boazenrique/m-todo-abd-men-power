@@ -22,7 +22,7 @@ export default function TreinoSemResultadoPage() {
   useEffect(() => {
     if (currentStep === 5) {
       setShowButton(false)
-      const timer = setTimeout(() => setShowButton(true), 4 * 60 * 1000)
+      const timer = setTimeout(() => setShowButton(true), 7 * 1000)
       return () => clearTimeout(timer)
     }
   }, [currentStep])
