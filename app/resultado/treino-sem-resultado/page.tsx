@@ -14,6 +14,9 @@ export default function TreinoSemResultadoPage() {
   const [answers, setAnswers] = useState<Record<string, string>>({})
   const [points, setPoints] = useState(70)
   const [showButton, setShowButton] = useState(false)
+  const [viewerCount, setViewerCount] = useState(() => Math.floor(Math.random() * (175 - 85 + 1)) + 85)
+
+  const getRandomViewerCount = () => Math.floor(Math.random() * (175 - 85 + 1)) + 85
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" })
@@ -22,8 +25,13 @@ export default function TreinoSemResultadoPage() {
   useEffect(() => {
     if (currentStep === 5) {
       setShowButton(false)
-      const timer = setTimeout(() => setShowButton(true), 7 * 1000)
-      return () => clearTimeout(timer)
+      setViewerCount(getRandomViewerCount())
+      const viewerInterval = setInterval(() => setViewerCount(getRandomViewerCount()), 4500)
+      const timer = setTimeout(() => setShowButton(true), 5 * 60 * 1000)
+      return () => {
+        clearTimeout(timer)
+        clearInterval(viewerInterval)
+      }
     }
   }, [currentStep])
 
@@ -167,6 +175,13 @@ export default function TreinoSemResultadoPage() {
             <div className="flex flex-col items-center px-4 py-6 pt-28">
               <div className="max-w-md w-full space-y-6">
                 
+                <div className="text-center">
+                  <p className="text-2xl font-semibold text-white sm:text-3xl">
+                    Veja agora a causa real da sua barriga continuar pra frente
+                  </p>
+                  <p className="text-sm text-slate-300">Assista agora!</p>
+                </div>
+
                 {/* Video Vturb */}
                 <Script 
                   src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js" 
@@ -182,6 +197,13 @@ export default function TreinoSemResultadoPage() {
                       style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
                       referrerPolicy="origin"
                     />
+                  </div>
+                </div>
+
+                <div className="mt-4 text-center">
+                  <div className="inline-flex items-center gap-2 text-sm font-semibold text-white drop-shadow-lg">
+                    <span className="h-2.5 w-2.5 rounded-full bg-red-500 animate-pulse" />
+                    <span>{viewerCount} pessoas estão assistindo</span>
                   </div>
                 </div>
 

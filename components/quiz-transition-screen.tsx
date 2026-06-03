@@ -49,16 +49,16 @@ export function QuizTransitionScreen({ onContinue }: QuizTransitionScreenProps) 
   }, [currentLine])
 
   return (
-    <div className="flex flex-col items-center px-4 py-8 pt-24 min-h-screen">
-      <div className="max-w-md w-full flex flex-col items-center">
+    <div className="flex flex-col items-center px-4 py-8 pt-32 min-h-screen">
+      <div className="max-w-2xl w-full flex flex-col items-center">
         
         {/* Chat balloon with text - ABOVE the image */}
-        <div className="w-full mb-4">
-          <div className="bg-white rounded-2xl rounded-bl-sm px-5 py-4 shadow-lg min-h-[140px] relative">
+        <div className="w-full mb-8">
+          <div className="bg-white rounded-2xl rounded-bl-sm px-5 py-5 shadow-lg min-h-[160px] relative">
             {/* Triangle pointer pointing down */}
             <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-white" />
             
-            <div className="space-y-3">
+            <div className="space-y-4">
               {/* Show completed lines */}
               {lines.slice(0, currentLine).map((line, index) => (
                 <p key={index} className={`text-gray-800 leading-relaxed ${index === 0 ? 'text-lg font-bold' : 'text-sm'}`}>

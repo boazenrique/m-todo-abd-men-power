@@ -286,17 +286,17 @@ export default function FinalPage() {
 
           {/* 6. Área de Preço - Layout Centralizado conforme imagem */}
           <div className="flex flex-col items-center py-4 mb-2">
-            <p className="text-white text-sm mb-1">
+            <p className="text-red-500 text-base mb-1">
               De: <span className="line-through">R$ 497,00</span>
             </p>
-            <p className="text-white font-bold text-base mb-2">Por apenas 12x de</p>
+            <p className="text-white font-bold text-lg mb-2">Por apenas 12x de</p>
 
             <div className="flex items-start justify-center gap-1 mb-1">
-              <span className="text-white text-xs font-bold mt-3">R$</span>
-              <span className="text-white text-6xl font-extrabold tracking-tighter">21,44</span>
+              <span className="text-[#00aa11] text-sm font-bold mt-3">R$</span>
+              <span className="text-[#00aa11] text-7xl font-extrabold tracking-tighter">21,44</span>
             </div>
 
-            <p className="text-white text-sm font-semibold">ou R$ 207,00 à vista</p>
+            <p className="text-white text-base font-semibold">ou R$ 207,00 à vista</p>
           </div>
 
           {/* 9. Botão CTA - Movido para dentro do card */}

@@ -81,8 +81,8 @@ export function QuizChatWithImage({
   }
 
   return (
-    <div className="flex flex-col items-center px-4 py-6 pt-28">
-      <div className="max-w-md w-full space-y-4">
+    <div className="flex flex-col items-center px-4 py-8 pt-32">
+      <div className="max-w-2xl w-full space-y-8">
         
         {/* Chat balloon */}
         <div className="w-full">
@@ -133,13 +133,13 @@ export function QuizChatWithImage({
             <p className="text-white font-semibold text-base mb-3 text-center">{questionTitle}</p>
             
             {/* Options card */}
-            <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-3xl p-5 shadow-2xl">
-              <div className="space-y-3">
+            <div className="w-full">
+              <div className="space-y-4">
                 {options.map((option, index) => (
                   <button
                     key={index}
                     onClick={() => handleSelect(option.label)}
-                    className={`w-full bg-white/5 border rounded-xl p-4 transition-all duration-200 flex items-center gap-3 ${
+                    className={`w-full bg-white/5 border rounded-xl p-5 transition-all duration-200 flex items-center gap-3 ${
                       selectedOption === option.label 
                         ? "border-[#869b26] bg-[#869b26]/10" 
                         : "border-white/20 hover:border-white/40 hover:bg-white/10"
