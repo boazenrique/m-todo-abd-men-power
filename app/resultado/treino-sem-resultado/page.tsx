@@ -24,12 +24,10 @@ export default function TreinoSemResultadoPage() {
 
   useEffect(() => {
     if (currentStep === 5) {
-      setShowButton(false)
+      setShowButton(true)
       setViewerCount(getRandomViewerCount())
       const viewerInterval = setInterval(() => setViewerCount(getRandomViewerCount()), 4500)
-      const timer = setTimeout(() => setShowButton(true), 5 * 60 * 1000)
       return () => {
-        clearTimeout(timer)
         clearInterval(viewerInterval)
       }
     }

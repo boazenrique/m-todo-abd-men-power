@@ -25,12 +25,10 @@ export default function BarrigaProjetadaFunnel() {
 
   useEffect(() => {
     if (currentStep === 4) {
-      setShowButton(false)
+      setShowButton(true)
       setViewerCount(getRandomViewerCount())
       const viewerInterval = setInterval(() => setViewerCount(getRandomViewerCount()), 4500)
-      const timer = setTimeout(() => setShowButton(true), 5 * 60 * 1000)
       return () => {
-        clearTimeout(timer)
         clearInterval(viewerInterval)
       }
     }
